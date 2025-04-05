@@ -1,0 +1,30 @@
+// Interface
+interface Animal {
+    void sound();
+}
+
+// Implementing class 1
+class Bird implements Animal {
+    @Override
+    public void sound() {
+        System.out.println("Bird chirps");
+    }
+}
+
+// Implementing class 2
+class Fish implements Animal {
+    @Override
+    public void sound() {
+        System.out.println("Fish cannot make a sound");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal bird = new Bird();
+        Animal fish = new Fish();
+        
+        bird.sound(); // Bird chirps
+        fish.sound(); // Fish cannot make a sound
+    }
+}
