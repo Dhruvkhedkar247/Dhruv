@@ -1,0 +1,36 @@
+// Superclass
+class Vehicle {
+    String brand;
+    
+    // Constructor of the superclass
+    public Vehicle(String brand) {
+        this.brand = brand;
+    }
+    
+    public void display() {
+        System.out.println("Brand: " + brand);
+    }
+}
+
+// Subclass
+class Car extends Vehicle {
+    int doors;
+    
+    // Constructor of the subclass
+    public Car(String brand, int doors) {
+        super(brand); // Call to superclass constructor
+        this.doors = doors;
+    }
+    
+    public void displayCar() {
+        display(); // Calling the superclass method
+        System.out.println("Doors: " + doors);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car car = new Car("Toyota", 4);
+        car.displayCar();
+    }
+}
