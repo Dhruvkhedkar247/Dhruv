@@ -1,0 +1,36 @@
+// Superclass
+class Person {
+    String name;
+    int age;
+    
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    
+    public void display() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+}
+
+// Subclass
+class Student extends Person {
+    String school;
+    
+    public Student(String name, int age, String school) {
+        super(name, age); // Call to superclass constructor
+        this.school = school;
+    }
+    
+    public void displayStudent() {
+        display(); // Calling the superclass method
+        System.out.println("School: " + school);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s = new Student("John", 18, "XYZ High School");
+        s.displayStudent();
+    }
+}
