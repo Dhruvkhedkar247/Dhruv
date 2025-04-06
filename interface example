@@ -1,0 +1,21 @@
+// Interface definition
+interface Animal {
+    // Abstract method (does not have implementation)
+    void sound();  // All implementing classes must provide an implementation of this method
+}
+
+// Dog class implements the Animal interface
+class Dog implements Animal {
+    // Providing implementation for the sound() method
+    public void sound() {
+        System.out.println("The dog barks");
+    }
+}
+
+public class InterfaceExample {
+    public static void main(String[] args) {
+        // Creating an object of Dog class (which implements Animal interface)
+        Animal dog = new Dog();
+        dog.sound(); // Outputs: The dog barks
+    }
+}
