@@ -1,0 +1,21 @@
+public class NonStaticVariableExample {
+    // Non-static variable
+    int count = 0;
+
+    // Constructor
+    public NonStaticVariableExample() {
+        count++;
+    }
+
+    public static void main(String[] args) {
+        // Creating objects
+        NonStaticVariableExample obj1 = new NonStaticVariableExample();
+        NonStaticVariableExample obj2 = new NonStaticVariableExample();
+        NonStaticVariableExample obj3 = new NonStaticVariableExample();
+
+        // Accessing non-static variable through objects
+        System.out.println("Object 1 count: " + obj1.count); // Outputs 1
+        System.out.println("Object 2 count: " + obj2.count); // Outputs 1
+        System.out.println("Object 3 count: " + obj3.count); // Outputs 1
+    }
+}
