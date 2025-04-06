@@ -1,0 +1,36 @@
+public class Person 
+ public class Book {
+    // Fields (attributes)
+    String title;
+    String author;
+
+    // Parameterized constructor with default values
+    public Book(String title, String author) {
+        this.title = title;
+        this.author = author;
+    }
+
+    // Default constructor
+    public Book() {
+        this.title = "Unknown Title";
+        this.author = "Unknown Author";
+    }
+
+    // Method to display book details
+    public void displayDetails() {
+        System.out.println("Title: " + title);
+        System.out.println("Author: " + author);
+    }
+
+    public static void main(String[] args) {
+        // Creating an object using the parameterized constructor
+        Book book1 = new Book("1984", "George Orwell");
+
+        // Creating an object using the default constructor
+        Book book2 = new Book();
+
+        // Displaying details of both books
+        book1.displayDetails();
+        book2.displayDetails();
+    }
+}   
