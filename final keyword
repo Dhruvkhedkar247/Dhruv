@@ -1,0 +1,20 @@
+class Animal {
+    // A final method
+    public final void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    // Uncommenting the next line will cause a compile-time error
+    // public void sound() {  // Error: Cannot override the final method from Animal
+    //     System.out.println("Dog barks");
+    // }
+}
+
+public class FinalMethodExample {
+    public static void main(String[] args) {
+        Animal animal = new Animal();
+        animal.sound();  // Output: Animal makes a sound
+    }
+}
